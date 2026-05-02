@@ -1,0 +1,31 @@
+
+.landing-container{
+
+    display: flex;
+    height: 95vh;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.greetingtext{
+    text-wrap: nowrap;
+    font-size: clamp(0.3rem, 4.5vw, 10rem);
+}
+
+.circuit-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.circuit-bg svg {
+  width: 100%;
+  height: 100%;
+}
+
+.greetingtext {
+  position: relative; /* sits above the svg */
+  z-index: 1;
+}
