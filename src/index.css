@@ -1,46 +1,22 @@
 :root{
-    --primary-blue: rgba(0, 87, 200, 0.664);
-    --primary-gray: rgba(128, 128, 128, 0.462);
+  --font-main: Lato;
 
-    --font-heading: 'Roboto Mono', Monospace;
-    --font-heading2: 'Inter', Monopace;
-    --font-body: 'Poppins', Monospace;
+  --primary-blue: #4e91fd;
+  --primary-blue-medium-translucent: #4e91fd50; 
+  --primary-blue-translucent: #4e91fd15;
+
+  --light-gray: rgb(239, 239, 239);
 }
 
+* {
+  box-sizing: border-box;
+}
 
 html{
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
-section{
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-top: 2%;
+body{
+  margin: 0;
+  font-family: var(--font-main);
 }
-
-h1{
-  font-family: var(--font-heading);
-  text-align: center;
-  color: var(--primary-blue);
-}
-
-h2{
-  font-family: var(--font-heading2);
-  color: black;
-  font-weight: 500;
-  text-align: center;
-}
-
-
-a{
-  font-family: var(--font-heading2);
-  font-weight: 300;
-}
-
-
-p{
-  text-align: center;
-  font-family: var(--font-heading2);
-}
-
-

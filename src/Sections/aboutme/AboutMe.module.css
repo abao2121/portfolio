@@ -1,0 +1,66 @@
+.profilePic {
+  width: clamp(200px, 15vw, 400px);
+  height: auto;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-left: 0px;
+}
+
+.profilePicContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.mainContainer {
+  display: flex;
+  gap: 8vw;
+  width: 100%;
+  height: clamp(25vw);
+  margin-top: 4vw;
+  margin-bottom: 2vw;
+  min-height: 400px;
+}
+
+.leftContainer {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.bio {
+  font-size: 1.75rem;
+}
+
+.hoverLabel {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  cursor: default;
+  z-index: 0;
+}
+
+.hoverLabel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 45%;
+  background-color: var(--primary-blue-medium-translucent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+  z-index: -1;
+}
+
+.hoverLabel:hover::before {
+  transform: scaleX(1);
+}
+
+@media (max-width: 800px) {
+  .mainContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+}

@@ -1,36 +1,32 @@
-import './App.css'
-import { Landing } from './Home/landing';
-import { Section } from './Section';
-import { Navbar } from './Navigation/Navbar';
-import { AboutMe } from './Sections/aboutme';
-import { Skills } from './Sections/skills';
-import { MyExperiences } from './Sections/experience';
+import styles from "./App.module.css";
+import { Landing } from "./Sections/home/Home";
+import { Navbar } from "./Navigation/Navbar";
+import { AboutMe } from "./Sections/aboutme/AboutMe";
+import { MyExperiences } from "./Sections/experience/Experience";
+import { Footer } from "./Sections/footer/Footer";
 
 function App() {
   return (
     <>
-    <Navbar/>
-    <section id = "home">
-      <Landing/>
-    </section>
-    
-    <section id="bio">
-      <AboutMe/>
-    </section>
+      <Navbar />
 
-    <section id="skills">
-      <Skills/>
-    </section>
+      <main>
+        <section id="home" className={styles.pageSection}>
+          <Landing />
+        </section>
 
-    <section id="experience">
-      < MyExperiences />
-    </section>
+        <section id="aboutme" className={styles.pageSection}>
+          <AboutMe />
+        </section>
 
-    <section id = "projects">
-      <Section title = "Projects" content = "This is my projects section"/>
-    </section>
+        <section id="experiences" className={styles.pageSection}>
+          <MyExperiences />
+        </section>
+      </main>
+
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

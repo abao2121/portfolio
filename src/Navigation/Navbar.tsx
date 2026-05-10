@@ -1,33 +1,31 @@
-import './Navbar.css'
+import styles from "./Navbar.module.css";
 
-interface INavItem{
-    label: string;
-    targetId: string;
+interface NavItem {
+  label: string;
+  targetId: string;
 }
 
-const navLinks: INavItem[] = [
-    {label: 'About Me', targetId: 'home'},
-    {label: 'Skills', targetId: 'skills'},
-    {label: 'Projects', targetId: 'projects'},
-    {label: 'Experiences', targetId: 'experiences'}
-]
+const navLinks: NavItem[] = [
+  { label: "About Me", targetId: "aboutme" },
+  { label: "Experiences", targetId: "experiences" },
+];
 
 export const Navbar = () => {
-    return (
-        <nav className = "navbar-Container">
+  return (
+    <nav className={styles.navContainer}>
+        <a className={styles.brand} href="home">
+          Alan Bao
+        </a>
 
-            <div className = "navbar-brand">
-                <a className = "navBrandText" href = 'home'>Alan Bao</a>
-            </div>
-
-            <ul className = "navList-Container">
-                {navLinks.map((link) => (
-                    <li className = "navItems" key={link.targetId}>
-                        <a className = "navText" href={`#${link.targetId}`}>{link.label}</a>
-                    </li>
-                ))}
-            </ul>
-
-        </nav>
-    )
-}
+      <ul className={styles.navListContainer}>
+        {navLinks.map((link) => (
+          <li key={link.targetId}>
+            <a className={styles.label} href={`#${link.targetId}`}>
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
