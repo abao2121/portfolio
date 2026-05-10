@@ -5,8 +5,8 @@ import { Links } from "../../components/links/Links";
 import styles from "./AboutMe.module.css";
 
 export const AboutMe = () => {
-  const [skillsVisible, setSkillsVisible] = useState(false);
-  const [linksVisible, setLinksVisible] = useState(false);
+  const [skillsVisible, setSkillsVisible] = useState(true);
+  const [linksVisible, setLinksVisible] = useState(true);
   return (
     <div className={styles.mainContainer}>
       <div className={styles.leftContainer}>
@@ -17,24 +17,18 @@ export const AboutMe = () => {
             intersection of hardware and high-level software. In my free time
             I'm also an amateur reader, runner, and oboist
           </p>
-          <div
-            onMouseEnter={() => setSkillsVisible(true)}
-            onMouseLeave={() => setSkillsVisible(false)}
-          >
+          <div>
             <p className={styles.hoverLabel}>
               <strong>
-                <i>Hover here to view my skills</i>
+                <i>My skills</i>
               </strong>
             </p>
             <Skills visible={skillsVisible} />
           </div>
-          <div
-            onMouseEnter={() => setLinksVisible(true)}
-            onMouseLeave={() => setLinksVisible(false)}
-          >
+          <div>
             <p className={styles.hoverLabel}>
               <strong>
-                <i>Hover here to view my links</i>
+                <i>My links</i>
               </strong>
             </p>
             <Links visible={linksVisible} />
