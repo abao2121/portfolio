@@ -11,7 +11,7 @@ function App() {
       <Navbar />
 
       <main>
-        <section id="home" className={styles.pageSection}>
+        <section id="home">
           <Landing />
         </section>
 

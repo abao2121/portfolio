@@ -12,7 +12,6 @@
 .greeting{
     position: relative;
     z-index: 1;
-    top: -7%;
     font-weight: 600;
     font-size: 3rem;
     word-spacing: 5px;
