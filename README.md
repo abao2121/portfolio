@@ -3,6 +3,12 @@
 A personal portfolio website built with React, TypeScript, and Vite.
 Now being hosted on https://alanbao.netlify.app/
 
+## Features
+
+- Interactive and animated home background page built using Boxy SVG and embedded CSS and Javscript to animate stroke offsets (that took me two weeks to do)
+- Interactive CSS Animations
+- Embedded links to relevant websites and my resume
+
 ## Tech Stack
 
 - React
