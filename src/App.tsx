@@ -4,6 +4,7 @@ import { Navbar } from "./Navigation/Navbar";
 import { AboutMe } from "./Sections/aboutme/AboutMe";
 import { MyExperiences } from "./Sections/experience/Experience";
 import { Footer } from "./Sections/footer/Footer";
+import { MyProjects } from "./Sections/projects/projects";
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
 
         <section id="experiences" className={styles.pageSection}>
           <MyExperiences />
+        </section>
+
+        <section id="projects" className={styles.pageSection}>
+          <MyProjects/>
         </section>
       </main>
 

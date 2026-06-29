@@ -4,7 +4,7 @@ import styles from "./Experience.module.css";
 
 interface Experience {
   title: string;
-  companyName: string,
+  companyName: string;
   companyLink: string;
   description: string;
   logoPath: string;
@@ -22,14 +22,14 @@ const Experience = ({
       <div className={styles.textContainer}>
         <h2 className={styles.title}>{title}</h2>
         <h3>
-            <a
-              className={styles.companyName}
-              href={companyLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {companyName}
-            </a>
+          <a
+            className={styles.companyName}
+            href={companyLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {companyName}
+          </a>
         </h3>
         <p>{description}</p>
       </div>
