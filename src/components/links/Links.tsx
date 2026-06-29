@@ -3,6 +3,7 @@ import type { IconType } from "react-icons";
 import { FaLinkedin } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import { GrDocumentUser } from "react-icons/gr";
+import resumePdf from "../../documents/abao_resume.pdf";
 
 interface Link {
   name: string;
@@ -18,7 +19,7 @@ const skills: Link[] = [
   {
     name: "resume",
     icon: GrDocumentUser,
-    link: "./src/documents/abao_resume.pdf",
+    link: resumePdf,
   },
   {
     name: "linkedin",
@@ -36,6 +37,7 @@ export const Links = ({ visible }: VisibilityProp) => {
           const Icon = skill.icon;
           return (
             <a
+              key={skill.name}
               className={styles.links}
               href={skill.link}
               target="_blank"
