@@ -1,7 +1,7 @@
 # Alan Bao - Personal Portfolio
 
 A personal portfolio website built with React, TypeScript, and Vite.
-Now being hosted on https://alanbao.netlify.app/
+Now being hosted on baoalan.com
 
 ## Features
 

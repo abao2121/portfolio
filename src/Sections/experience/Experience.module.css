@@ -21,6 +21,10 @@
   background-color: var(--primary-blue-translucent);
 }
 
+.experienceContainer:hover .logoContainer {
+  width: 100%;
+}
+
 .header {
   margin-bottom: 10px;
   color: black;
@@ -65,10 +69,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 0%;
   overflow: hidden;
   object-fit: contain;
   max-width: 300px;
+  transition: width 0.1s ease;
 }
 
 .logo {
