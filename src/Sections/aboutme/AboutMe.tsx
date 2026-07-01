@@ -5,9 +5,8 @@ import { Links } from "../../components/links/Links";
 import styles from "./AboutMe.module.css";
 
 export const AboutMe = () => {
-  const [activePanel, setActivePanel] = useState<"skills" | "links" | null>(
-    null,
-  );
+  const [skillsVisible, setSkillsVisible] = useState<boolean>(false);
+  const [linksVisible, setLinksVisible] = useState<boolean>(false);
 
   return (
     <div className={styles.mainContainer}>
@@ -19,28 +18,22 @@ export const AboutMe = () => {
             intersection of hardware and high-level software. In my free time
             I'm also an amateur reader, runner, and oboist
           </p>
-          <div onMouseLeave={() => setActivePanel(null)}>
+          <div onMouseLeave={() => setSkillsVisible(false)}>
             <div className={styles.hoverLabelsContainer}>
               <p
-                onMouseEnter={() => setActivePanel("skills")}
+                onMouseEnter={() => setSkillsVisible(true)}
                 className={styles.hoverLabel}
               >
-                My skills
-              </p>
-              <p
-                onMouseEnter={() => setActivePanel("links")}
-                className={styles.hoverLabel}
-              >
-                My links
+                What I work with
               </p>
             </div>
-            {activePanel === "skills" ? <Skills visible={true} /> : <></>}
-            {activePanel === "links" ? <Links visible={true} /> : <></>}
+            <Skills visible={skillsVisible} />
           </div>
         </div>
       </div>
-      <div className={styles.profilePicContainer}>
-        <img className={styles.profilePic} src={profilePic} />
+      <div onMouseLeave={() => setLinksVisible(false)} className={styles.profilePicContainer}>
+        <img onMouseEnter={() => setLinksVisible(true)} className={styles.profilePic} src={profilePic} />
+        <Links visible={linksVisible} />
       </div>
     </div>
   );
