@@ -8,14 +8,15 @@ interface NavItem {
 const navLinks: NavItem[] = [
   { label: "About Me", targetId: "aboutme" },
   { label: "Experiences", targetId: "experiences" },
+  { label: "Projects", targetId: "projects" },
 ];
 
 export const Navbar = () => {
   return (
     <nav className={styles.navContainer}>
-        <a className={styles.brand} href="home">
-          Alan Bao
-        </a>
+      <a className={styles.brand} href="home">
+        Alan Bao
+      </a>
 
       <ul className={styles.navListContainer}>
         {navLinks.map((link) => (
